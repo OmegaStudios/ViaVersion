@@ -4,6 +4,8 @@ enableFeaturePreview("VERSION_CATALOGS")
 dependencyResolutionManagement {
     // configures repositories for all projects
     repositories {
+        maven("https://repo.spongepowered.org/maven")
+        maven("https://jitpack.io")
         maven("https://repo.viaversion.com")
         maven("https://papermc.io/repo/repository/maven-public/")
         maven("https://oss.sonatype.org/content/repositories/snapshots/")
@@ -41,6 +43,7 @@ setupViaSubproject("velocity")
 setupViaSubproject("sponge")
 setupViaSubproject("sponge-legacy")
 setupViaSubproject("fabric")
+setupViaSubproject("minestom")
 
 setupSubproject("viaversion") {
     projectDir = file("universal")

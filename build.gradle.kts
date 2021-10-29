@@ -16,7 +16,8 @@ val platforms = setOf(
     projects.viaversionBungee,
     projects.viaversionFabric,
     projects.viaversionSponge,
-    projects.viaversionVelocity
+    projects.viaversionVelocity,
+    projects.viaversionMinestom
 ).map { it.dependencyProject }
 
 val special = setOf(

@@ -24,6 +24,7 @@ bungee = "1.16-R0.5-SNAPSHOT"
 sponge = "5.0.0"
 legacySponge = "4.0.0"
 velocity = "3.0.0-SNAPSHOT"
+minestom = "master-SNAPSHOT"
 
 
 [libraries]
@@ -54,6 +55,7 @@ bungee = { group = "net.md-5", name = "bungeecord-api", version.ref = "bungee" }
 sponge = { group = "org.spongepowered", name = "spongeapi", version.ref = "sponge" }
 legacySponge = { group = "org.spongepowered", name = "spongeapi", version.ref = "legacySponge" }
 velocity = { group = "com.velocitypowered", name = "velocity-api", version.ref = "velocity" }
+minestom = { group = "com.github.Minestom", name = "Minestom", version.ref = "minestom" }
 
 
 [bundles]
