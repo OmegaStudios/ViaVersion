@@ -17,6 +17,9 @@ snakeYaml = "1.18"
 junit = "5.7.2"
 checkerQual = "3.18.0"
 
+log4j = "2.14.1"
+slf4j = "2.14.1"
+
 # Platforms
 paper = "1.16.5-R0.1-SNAPSHOT"
 legacyBukkit = "1.8.8-R0.1-SNAPSHOT"
@@ -40,6 +43,9 @@ flare = { group = "space.vectrix.flare", name = "flare", version.ref = "flare" }
 flareFastutil = { group = "space.vectrix.flare", name = "flare-fastutil", version.ref = "flare" }
 openNBT = { group = "com.viaversion", name = "opennbt", version.ref = "openNBT" }
 javassist = { group = "org.javassist", name = "javassist", version.ref = "javassist" }
+
+log4j = { group = "org.apache.logging.log4j", name = "log4j-core", version.ref = "log4j"}
+slf4j = { group = "org.apache.logging.log4j", name = "log4j-slf4j-impl", version.ref = "slf4j"}
 
 netty = { group = "io.netty", name = "netty-all", version.ref = "netty" }
 guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }

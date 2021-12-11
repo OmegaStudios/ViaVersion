@@ -17,6 +17,8 @@ dependencies {
     api(libs.flareFastutil)
     api(libs.openNBT)
     api(libs.gson)
+    api(libs.slf4j)
+    api(libs.log4j)
 
     compileOnlyApi(libs.snakeYaml)
     compileOnlyApi(libs.netty)

@@ -7,7 +7,6 @@ import com.viaversion.viaversion.Minestom.command.MinestomCommandSender;
 import com.viaversion.viaversion.Minestom.platform.MinestomViaAPI;
 import com.viaversion.viaversion.Minestom.platform.MinestomViaConfig;
 import com.viaversion.viaversion.Minestom.platform.MinestomViaTask;
-import com.viaversion.viaversion.api.Via;
 import com.viaversion.viaversion.api.ViaAPI;
 import com.viaversion.viaversion.api.command.ViaCommandSender;
 import com.viaversion.viaversion.api.configuration.ConfigurationProvider;
