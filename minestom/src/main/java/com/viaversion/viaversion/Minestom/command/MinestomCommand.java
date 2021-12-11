@@ -18,8 +18,14 @@ public class MinestomCommand extends Command {
         addSyntax(this::execute, args);
     }
 
-    public void execute(CommandSender commandSender, CommandContext context) {
+    public boolean execute(CommandSender commandSender, CommandContext context) {
         String[] args = context.get("args").toString().split(" ");
-        handler.onCommand(new MinestomCommandSender(commandSender), args);
+        boolean result = handler.onCommand(new MinestomCommandSender(commandSender), args);
+        return result;
+    }
+
+    public boolean execute(MinestomCommandSender commandSender, String[] args) {
+        boolean result = handler.onCommand(commandSender, args);
+        return result;
     }
 }

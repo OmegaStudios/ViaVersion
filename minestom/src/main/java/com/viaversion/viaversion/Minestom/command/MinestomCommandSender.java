@@ -2,7 +2,9 @@ package com.viaversion.viaversion.Minestom.command;
 
 import com.viaversion.viaversion.api.command.ViaCommandSender;
 import net.minestom.server.command.CommandSender;
+import net.minestom.server.command.builder.condition.CommandCondition;
 import net.minestom.server.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
@@ -15,6 +17,17 @@ public class MinestomCommandSender implements ViaCommandSender {
 
     @Override
     public boolean hasPermission(String permission) { return sender.hasPermission(permission); }
+
+    public boolean hasPermission(@NotNull MinestomCommand command) {
+        final CommandCondition commandCondition = command.getCondition();
+        if (commandCondition != null) {
+            // Do not show command if return false
+            if (!commandCondition.canUse(sender, command.toString())) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     @Override
     public void sendMessage(String msg) { sender.sendMessage(msg); }
