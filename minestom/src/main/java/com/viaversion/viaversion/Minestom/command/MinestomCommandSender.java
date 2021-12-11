@@ -18,16 +18,16 @@ public class MinestomCommandSender implements ViaCommandSender {
     @Override
     public boolean hasPermission(String permission) { return sender.hasPermission(permission); }
 
-    public boolean hasPermission(@NotNull MinestomCommand command) {
-        final CommandCondition commandCondition = command.getCondition();
-        if (commandCondition != null) {
-            // Do not show command if return false
-            if (!commandCondition.canUse(sender, command.toString())) {
-                return false;
-            }
-        }
-        return true;
-    }
+//    public boolean hasPermission(@NotNull MinestomCommand command) {
+//        final CommandCondition commandCondition = command.getCondition();
+//        if (commandCondition != null) {
+//            // Do not show command if return false
+//            if (!commandCondition.canUse(sender, command.toString())) {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
 
     @Override
     public void sendMessage(String msg) { sender.sendMessage(msg); }

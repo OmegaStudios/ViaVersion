@@ -16,58 +16,58 @@ import org.jetbrains.annotations.Nullable;
 import java.util.*;
 
 public class MinestomCommandHandler extends ViaCommandHandler {
-    private CommandManager commandManager = new CommandManager();
-
-    public MinestomCommandHandler() {}
-
-    public MinestomCommand getCommand(String name) {
-        return (MinestomCommand) commandManager.getCommand(name);
-    }
-
-    public boolean onCommand(MinestomCommandSender sender, String[] args) {
-        if (args.length == 0) {
-            showHelp(sender);
-            return false;
-        }
-
-        MinestomCommand command = getCommand(args[0]);
-        List<Command> subCommands = command.getSubcommands();
-
-        if (!sender.hasPermission(command)) {
-            sender.sendMessage("Lol you thought");
-            return false;
-        }
-
-        boolean result = command.execute(sender, args);
-        if (!result) {
-            sender.sendMessage("It literally failed what are you even doing");
-        }
-        return result;
-    }
-
-    public List<String> onTabComplete(MinestomCommandSender sender, String[] args) {
-        Set<MinestomCommand> allowed = calculateAllowedCommands(sender);
-        List<String> output = new ArrayList<>();
-    }
-
-    public void registerCommand(MinestomCommand command) {
-        try {
-            commandManager.register(command);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public List<Suggestion> getSuggestions(CommandSender sender, String s) {
-
-    }
-
-    public void showHelp(MinestomCommandSender sender) {
-        sender.sendMessage("Here is a help message regarding your command");
-    }
-
-    private Set<MinestomCommand> calculateAllowedCommands(MinestomCommandSender sender) {
-        Set<MinestomCommand> commands = new HashSet<>();
-
-    }
+//    private CommandManager commandManager = new CommandManager();
+//
+//    public MinestomCommandHandler() {}
+//
+//    public MinestomCommand getCommand(String name) {
+//        return (MinestomCommand) commandManager.getCommand(name);
+//    }
+//
+//    public boolean onCommand(MinestomCommandSender sender, String[] args) {
+//        if (args.length == 0) {
+//            showHelp(sender);
+//            return false;
+//        }
+//
+//        MinestomCommand command = getCommand(args[0]);
+//        List<Command> subCommands = command.getSubcommands();
+//
+//        if (!sender.hasPermission(command)) {
+//            sender.sendMessage("Lol you thought");
+//            return false;
+//        }
+//
+//        boolean result = command.execute(sender, args);
+//        if (!result) {
+//            sender.sendMessage("It literally failed what are you even doing");
+//        }
+//        return result;
+//    }
+//
+//    public List<String> onTabComplete(MinestomCommandSender sender, String[] args) {
+//        Set<MinestomCommand> allowed = calculateAllowedCommands(sender);
+//        List<String> output = new ArrayList<>();
+//    }
+//
+//    public void registerCommand(MinestomCommand command) {
+//        try {
+//            commandManager.register(command);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    public List<Suggestion> getSuggestions(CommandSender sender, String s) {
+//
+//    }
+//
+//    public void showHelp(MinestomCommandSender sender) {
+//        sender.sendMessage("Here is a help message regarding your command");
+//    }
+//
+//    private Set<MinestomCommand> calculateAllowedCommands(MinestomCommandSender sender) {
+//        Set<MinestomCommand> commands = new HashSet<>();
+//
+//    }
 }
